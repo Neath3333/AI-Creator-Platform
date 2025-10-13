@@ -32,8 +32,8 @@ export const store = mutation({
       email: identity.email ?? "",        // add email
       createdAt: now,                      // add createdAt timestamp
       lastActiveAt: now,                   // add lastActiveAt timestamp
-      image: identity.imageUrl ?? null,    // optional
-      username: identity.username ?? null, // optional
+      image: identity.imageUrl || undefined,    // optional (undefined if not present or null)
+      username: identity.username || undefined, // optional (undefined if not present or null)
     });
   },
 });
