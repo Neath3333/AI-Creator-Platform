@@ -13,6 +13,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { LayoutDashboard } from "lucide-react";
 
 
 const Header = () => {
@@ -47,14 +48,21 @@ const Header = () => {
                     </div>
                 )}
                 <Authenticated>
-                    <UserButton />
+                    <Link href={"/dashboard"}>
+                    <Button variant={"outline"} >
+                    <LayoutDashboard className="h-4 w-4"/>
+                    <span className="hidden md:inline ml-2">Dashboard</span>
+                </Button>
+                </Link>
+                <UserButton/>
                 </Authenticated>
+                
                 <Unauthenticated>
                     <SignInButton>
-                        <Button variant={"gradient"} size="sm">Sign In</Button>
+                        <Button variant={"ghost"} size="sm">Sign In</Button>
                     </SignInButton>
                     <SignUpButton>
-                        <Button  size="sm" className="whitespace-nowrap">Sign Up</Button>
+                        <Button variant={"gradient"} size={"sm"} className="whitespace-nowrap">Get Started</Button>
                     </SignUpButton>
                 </Unauthenticated>
 
