@@ -2,11 +2,8 @@
 
 import React from "react";
 import {
-    ClerkProvider,
     SignInButton,
     SignUpButton,
-    SignedIn,
-    SignedOut,
     UserButton,
 } from '@clerk/nextjs'
 import { Authenticated, Unauthenticated } from "convex/react";
@@ -15,11 +12,12 @@ import { BarLoader } from "react-spinners";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
+
 
 const Header = () => {
 
-    const { isAuthenticated, isLoading } = useStoreUser();
+    const { isLoading } = useStoreUser();
     const path = usePathname();
     return (
         <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl px-4">
@@ -51,12 +49,12 @@ const Header = () => {
                 <Authenticated>
                     <UserButton />
                 </Authenticated>
-
                 <Unauthenticated>
-                    <SignInButton />
-                    <Button variant="ghost" size="sm">Sign In</Button>
+                    <SignInButton>
+                        <Button variant={"gradient"} size="sm">Sign In</Button>
+                    </SignInButton>
                     <SignUpButton>
-                        <Button variant="gradient" size="sm" className="whitespace-nowrap">Sign Up</Button>
+                        <Button  size="sm" className="whitespace-nowrap">Sign Up</Button>
                     </SignUpButton>
                 </Unauthenticated>
 
