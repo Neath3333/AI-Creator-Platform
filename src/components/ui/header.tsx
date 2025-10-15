@@ -47,24 +47,26 @@ const Header = () => {
                     hover:text-[#2e27eaff] cursor-pointer"> Testimonials</Link>
                     </div>
                 )}
-                <Authenticated>
-                    <Link href={"/dashboard"}>
-                    <Button variant={"outline"} >
-                    <LayoutDashboard className="h-4 w-4"/>
-                    <span className="hidden md:inline ml-2">Dashboard</span>
-                </Button>
-                </Link>
-                <UserButton/>
-                </Authenticated>
-                
-                <Unauthenticated>
-                    <SignInButton>
-                        <Button variant={"ghost"} size="sm">Sign In</Button>
-                    </SignInButton>
-                    <SignUpButton>
-                        <Button variant={"gradient"} size={"sm"} className="whitespace-nowrap">Get Started</Button>
-                    </SignUpButton>
-                </Unauthenticated>
+                <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                    <Authenticated>
+                        <Link href={"/dashboard"}>
+                            <Button variant={"outline"} >
+                                <LayoutDashboard className="h-4 w-4" />
+                                <span className="hidden md:inline ml-2">Dashboard</span>
+                            </Button>
+                        </Link>
+                        <UserButton />
+                    </Authenticated>
+
+                    <Unauthenticated>
+                        <SignInButton>
+                            <Button variant={"ghost"} size="sm">Sign In</Button>
+                        </SignInButton>
+                        <SignUpButton>
+                            <Button variant={"gradient"} size={"sm"} className="whitespace-nowrap">Get Started</Button>
+                        </SignUpButton>
+                    </Unauthenticated>
+                </div>
 
 
                 {isLoading && (
@@ -77,4 +79,4 @@ const Header = () => {
     );
 };
 
-export default Header;  
+export default Header;      
