@@ -1,4 +1,7 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { RouteMatcher } from 'next/dist/server/route-matchers/route-matcher';
+
+const isProtectedRoute = createRouteMatcher()
 
 export default clerkMiddleware();
 
