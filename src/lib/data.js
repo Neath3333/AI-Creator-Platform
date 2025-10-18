@@ -49,6 +49,44 @@ export const features = [
     color: "from-emerald-500 to-green-500",
   },
 ];
+export const platformTabs = [
+  {
+    title: "Content Creation",
+    icon: PenTool,
+    description:
+      "AI-powered writing tools that help you create engaging content faster than ever before.",
+    features: [
+      "Smart title suggestions",
+      "Content optimization",
+      "SEO recommendations",
+      "Plagiarism detection",
+    ],
+  },
+  {
+    title: "Audience Growth",
+    icon: TrendingUp,
+    description:
+      "Build and engage your community with powerful audience management tools.",
+    features: [
+      "Follower analytics",
+      "Engagement tracking",
+      "Community insights",
+      "Growth recommendations",
+    ],
+  },
+  {
+    title: "Content Management",
+    icon: Settings,
+    description:
+      "Organize and manage your content with comprehensive tools and analytics.",
+    features: [
+      "Draft system",
+      "Post scheduling",
+      "Content analytics",
+      "Media management",
+    ],
+  },
+]; 
 
 export const socialProofStats = [
   { metric: "50K+", label: "Active Creators", icon: Users },
@@ -87,41 +125,3 @@ export const testimonials = [
   },
 ];
 
-export const platformTabs = [
-  {
-    title: "Content Creation",
-    icon: PenTool,
-    description:
-      "AI-powered writing tools that help you create engaging content faster than ever before.",
-    features: [
-      "Smart title suggestions",
-      "Content optimization",
-      "SEO recommendations",
-      "Plagiarism detection",
-    ],
-  },
-  {
-    title: "Audience Growth",
-    icon: TrendingUp,
-    description:
-      "Build and engage your community with powerful audience management tools.",
-    features: [
-      "Follower analytics",
-      "Engagement tracking",
-      "Community insights",
-      "Growth recommendations",
-    ],
-  },
-  {
-    title: "Content Management",
-    icon: Settings,
-    description:
-      "Organize and manage your content with comprehensive tools and analytics.",
-    features: [
-      "Draft system",
-      "Post scheduling",
-      "Content analytics",
-      "Media management",
-    ],
-  },
-];
