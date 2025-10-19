@@ -27,9 +27,9 @@ Your AI content generation feature needs a Google Gemini API key to work.
 
    With your actual key:
    ```
-   GEMINI_API_KEY=AIzaSyABC123def456GHI789jkl012MNO345pqr
+   GEMINI_API_KEY=AIzaSy...your-actual-key-here...
    ```
-   (Example format - use YOUR actual key)
+   **⚠️ IMPORTANT**: Replace with YOUR actual Gemini API key from Step 1
 
 ## Step 3: Restart Your Dev Server
 
